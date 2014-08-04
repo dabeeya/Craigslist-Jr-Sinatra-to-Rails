@@ -1,0 +1,8 @@
+<h1><%= @post.title %> - $<%= @post.price %></h1>
+<p><strong>Description: </strong><%= @post.description %></p>
+<p><strong>Email: </strong><%= @post.email %>
+
+<p><button><%= link_to "Edit Post", edit_category_post_path(@post.category_id, @post) %></button>
+  <button><%= link_to 'Delete Post', category_post_path(@post.category_id, @post), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+<button><%= link_to "Back", category_path(@post.category_id) %></button></p>
+
